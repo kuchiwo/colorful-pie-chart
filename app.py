@@ -2,18 +2,18 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
-st.title("?? ƒJƒ‰ƒtƒ‹‰~ƒOƒ‰ƒtƒWƒFƒlƒŒ[ƒ^[")
+st.title("ã‚«ãƒ©ãƒ•ãƒ«å††ã‚°ãƒ©ãƒ•ã‚¸ã‚§ãƒãƒ¬ãƒ¼ã‚¿ãƒ¼")
 
-st.write("ˆÈ‰º‚ÌƒXƒ‰ƒCƒ_[‚Å€–Ú”‚ð‘I‚ñ‚Å‚­‚¾‚³‚¢??")
+st.write("ä»¥ä¸‹ã®ã‚¹ãƒ©ã‚¤ãƒ€ãƒ¼ã§é …ç›®æ•°ã‚’é¸ã‚“ã§ãã ã•ã„")
 
-num_sections = st.slider("€–Ú”", min_value=2, max_value=10, value=5)
+num_sections = st.slider("é …ç›®æ•°", min_value=2, max_value=10, value=5)
 
-# ƒ‰ƒ“ƒ_ƒ€‚ÈŠ„‡‚Æƒ‰ƒxƒ‹‚ðì¬
+# ãƒ©ãƒ³ãƒ€ãƒ ãªå‰²åˆã¨ãƒ©ãƒ™ãƒ«ã‚’ä½œæˆ
 values = np.random.rand(num_sections)
 values /= values.sum()
-labels = [f"€–Ú {i+1}" for i in range(num_sections)]
+labels = [f"é …ç›® {i+1}" for i in range(num_sections)]
 
-# ƒOƒ‰ƒt•`‰æ
+# ã‚°ãƒ©ãƒ•æç”»
 fig, ax = plt.subplots()
 ax.pie(values, labels=labels, autopct="%1.1f%%", startangle=90)
 ax.axis("equal")
